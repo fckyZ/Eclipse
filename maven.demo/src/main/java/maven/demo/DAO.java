@@ -35,7 +35,7 @@ public class DAO {
         
         try {
             Statement st = conexao.createStatement();
-            String query = "INSERT INTO \"Veiculo\" (id, nome, preco, ano) VALUES (" +
+            String query = "INSERT INTO \"Veiculos\" (id, nome, preco, ano) VALUES (" +
                             veiculo.get_Id() + ", '" + veiculo.get_Name() + "', " +
                             veiculo.get_Preco() + ", " + veiculo.get_Ano() + ")";
             st.executeUpdate(query);
@@ -53,7 +53,7 @@ public class DAO {
         
         try {
             Statement st = conexao.createStatement();
-            String query = "UPDATE \"Veiculo\" SET nome = '" + veiculo.get_Name() + "', preco = " + veiculo.get_Preco() + ", ano = " + veiculo.get_Ano() + " WHERE id = " + veiculo.get_Id();
+            String query = "UPDATE \"Veiculos\" SET nome = '" + veiculo.get_Name() + "', preco = " + veiculo.get_Preco() + ", ano = " + veiculo.get_Ano() + " WHERE id = " + veiculo.get_Id();
             st.executeUpdate(query);
             st.close();
             status = true;
@@ -69,7 +69,7 @@ public class DAO {
         
         try {
             Statement st = conexao.createStatement();
-            st.executeUpdate("DELETE FROM \"Veiculo\" WHERE id = " + id);
+            st.executeUpdate("DELETE FROM \"Veiculos\" WHERE id = " + id);
             st.close();
             status = true;
         } catch (SQLException v) {
@@ -84,7 +84,7 @@ public class DAO {
         
         try {
             Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = st.executeQuery("SELECT * FROM \"Veiculo\"");        
+            ResultSet rs = st.executeQuery("SELECT * FROM \"Veiculos\"");        
             if(rs.next()) {
                 rs.last();
                 veiculos = new Veiculo[rs.getRow()];
