@@ -1,12 +1,12 @@
 package maven.demo;
 
-public class Veiculos {
+public class Veiculo {
 	public int id;
 	public String nome;
 	public Double preco;
 	public int ano;
 	
-	public Veiculos ( )
+	public Veiculo ( )
 	{
 		this.id = 0;
 		this.nome = "";
@@ -14,7 +14,7 @@ public class Veiculos {
 		this.ano = 0;
 	}
 	
-	public Veiculos ( int id_, String nome_, Double preco_, int ano_ )
+	public Veiculo ( int id_, String nome_, Double preco_, int ano_ )
 	{
 		this.id = id_;
 		this.nome = nome_;
