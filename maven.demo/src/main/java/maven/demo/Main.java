@@ -12,7 +12,6 @@ public class Main
         if ( ! dao.conectar ( ) ) 
         {
             System.out.println ( "Falha ao conectar ao banco de dados." );
-            return ;
         }
         System.out.println ( "Conexão bem-sucedida!" );
 
