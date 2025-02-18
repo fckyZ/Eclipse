@@ -1,10 +1,10 @@
 package maven.demo;
 
 public class Veiculo {
-	public int id;
-	public String nome;
-	public Double preco;
-	public int ano;
+	private String nome;
+	private int id;
+	private Double preco;
+	private int ano;
 	
 	public Veiculo ( )
 	{
